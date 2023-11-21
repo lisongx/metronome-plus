@@ -3,11 +3,11 @@ const togglePlay = (audioElement) => {
 };
 
 const backward = (audioElement) => {
-    audioElement.currentTime -= 10;
+    audioElement.currentTime -= 5;
 };
 
 const forward = (audioElement) => {
-    audioElement.currentTime += 10;
+    audioElement.currentTime += 5;
 };
 
 
