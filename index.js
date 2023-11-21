@@ -1,7 +1,17 @@
 const togglePlay = (audioElement) => {
-    console.log(audioElement, audioElement);
     return audioElement.paused ? audioElement.play() : audioElement.pause();
 };
+
+const backward = (audioElement) => {
+    audioElement.currentTime -= 10;
+};
+
+const forward = (audioElement) => {
+    audioElement.currentTime += 10;
+};
+
+
+const isElementControlType = (el, type) => el.classList.contains(type);
 
 function startup() {
     const el = document.getElementById("play-block");
@@ -9,8 +19,16 @@ function startup() {
 
     el.addEventListener("touchstart", handleStart);
     el.addEventListener("touchend", function (evt) {
+        const target = evt.target;
         handleEnd(evt);
-        togglePlay(player);
+
+        if (isElementControlType(target, "play")) {
+            togglePlay(player);
+        } else if (isElementControlType(target, "backward")) {
+            backward(player);
+        } else if (isElementControlType(target, "forward")) {
+            forward(player);
+        }
         return;
     });
     el.addEventListener("touchcancel", handleCancel);
