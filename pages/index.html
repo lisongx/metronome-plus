@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Metronome +</title>
+      <link href="main.css" rel="stylesheet" />
+      <script src="/rhizome/rhizome.js"></script>
+    </head>
+    <body>
+      <!-- <audio id="player" loop src="https://s3.eu-west-2.amazonaws.com/notimportant/recordings/CHR.m4a" controls></audio>
+
+      <div id="play-block" class="container">
+        <div class="backward control-area"></div>
+        <div class="play control-area"></div>
+        <div class="forward control-area"></div>
+      </div>
+
+      <pre id="log" style="border: 1px solid #ccc;"></pre> -->
+
+      <div id="osc-app">
+        <ul id="osc-item-list">
+        </ul>
+      </div>
+
+      <template id="osc-item-template">
+        <li class="osc-item">
+          <input type="range" class="amp-slide" min="0" max="1" value="0" step="0.02" orient="vertical" />
+          <input type="range" class="freq-slide" min="0" max="1" value="0" step="0.02" orient="vertical" />
+        </li>
+      </template>
+
+      <script src="index.js"></script>
+    </body>
+  </html>
