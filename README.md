@@ -39,3 +39,8 @@ Then open the `controls/index.scd` file with SuperCollier, now you can play
 (the code should be pretty self explanatory)
 
 
+
+## TODOs
+
+* have a more simple/elegant DSL for controlling the movement instead of the OSCDef in our SC file
+* possibly the code you are typing are also displaying in the tablet or somewhere for audience to see
